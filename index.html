@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfólio de design gráfico de Paulo Henrique Sampaio">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+<title>Portfólio Paulo Sampaio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: B&W editorial frame (paper + ink) around four project rooms, each painted in its client's own palette */
+:root{
+  color-scheme: light;
+  --paper:#E7E7E3; --paper-2:#DADAD5; --ink:#131416; --ink-soft:#55585E; --rule:#B9BAB5;
+  --aicon-bg:#06182A; --aicon-ac:#2FC6E8;
+  --cbf-bg:#0B1828; --cbf-ac:#D8B76E;
+  --nacao-bg:#141C22; --nacao-ac:#A8DDF4;
+  --idp-bg:#0B3C96; --idp-ac:#FFFFFF;
+  --on-dark:#F2F3F1; --on-dark-soft:rgba(242,243,241,.68);
+  --f-display:"Archivo","Arial Narrow",Helvetica,sans-serif;
+  --f-body:"Archivo",Helvetica,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ink);color:var(--on-dark)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.mark{font-family:var(--f-display);font-stretch:125%;font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:15px;white-space:nowrap}
+.top nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 10px;border-radius:999px;white-space:nowrap;color:var(--on-dark-soft);transition:color .2s,background .2s}
+.top nav a:hover,.top nav a.on{color:var(--ink);background:var(--on-dark)}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) 0}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:end}
+.hero h1{font-family:var(--f-display);font-weight:850;font-stretch:125%;line-height:.86;letter-spacing:-.02em;font-size:clamp(46px,9.2vw,132px);margin:18px 0 0;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero h1 .thin{font-weight:300;font-style:italic;font-stretch:100%;letter-spacing:-.01em}
+.hero .lede{max-width:44ch;font-size:clamp(17px,1.6vw,20px);margin:28px 0 0;text-wrap:pretty}
+.hero-photo{position:relative;margin:0}
+.hero-photo img{width:100%;aspect-ratio:1066/1450;object-fit:cover;object-position:50% 30%;filter:contrast(1.04)}
+.hero-photo figcaption{position:absolute;left:12px;bottom:12px;background:var(--paper);padding:5px 8px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:28px;padding-top:16px;border-top:1px solid var(--ink);color:var(--ink-soft)}
+
+/* index strip */
+.index{margin-top:clamp(36px,6vw,72px);border-top:1px solid var(--ink)}
+.index ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.index li{border-right:1px solid var(--rule)}
+.index li:last-child{border-right:0}
+.index a{display:flex;flex-direction:column;gap:6px;padding:18px 16px 22px;text-decoration:none;height:100%;transition:background .2s}
+.index a:hover{background:var(--paper-2)}
+.index b{font-family:var(--f-display);font-stretch:115%;font-weight:750;font-size:clamp(18px,2vw,24px);line-height:1.1}
+.index small{color:var(--ink-soft);font-size:14px}
+
+/* about */
+.about{padding-block:clamp(56px,8vw,112px);border-top:1px solid var(--ink)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-family:var(--f-display);font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(30px,5vw,64px);line-height:.95;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(32px,5vw,80px)}
+.about-grid > *{min-width:0}
+.bio{font-size:clamp(19px,2vw,25px);line-height:1.4;margin:0 0 28px;max-width:30ch;text-wrap:pretty}
+.bio em{font-style:italic;font-weight:300}
+.block{margin-top:32px}
+.block h3{margin:0 0 12px}
+.edu p{margin:0 0 10px}
+.edu b{font-weight:700}
+.skills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.skills li{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:14px}
+.xp{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.xp li{display:grid;grid-template-columns:150px 1fr;gap:6px 20px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.xp .when{color:var(--ink-soft);padding-top:3px}
+.xp h4{margin:0;font-family:var(--f-display);font-stretch:115%;font-weight:750;font-size:19px;line-height:1.2}
+.xp h4 i{font-family:var(--f-body);font-stretch:100%;font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:6px}
+.xp p{margin:4px 0 0;font-size:15px;color:var(--ink-soft);max-width:60ch}
+.xp li > *{min-width:0}
+
+/* project rooms */
+.room{color:var(--on-dark);padding-block:clamp(56px,8vw,112px);position:relative;overflow:hidden}
+.room .sec-head{border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:20px}
+.room .num{color:var(--ac)}
+.room .sec-head h2 small{display:block;font-family:var(--f-body);font-stretch:100%;font-weight:400;text-transform:none;font-size:clamp(15px,1.4vw,18px);letter-spacing:0;color:var(--on-dark-soft);margin-top:12px}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:5px 11px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--on-dark-soft)}
+.room-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,64px);margin-bottom:clamp(28px,4vw,48px)}
+.room-intro > *{min-width:0}
+.room-intro p{margin:0;font-size:clamp(16px,1.5vw,19px);max-width:52ch;color:var(--on-dark);text-wrap:pretty}
+.room-intro .facts{align-content:flex-start}
+#aicon{background:var(--aicon-bg);--ac:var(--aicon-ac);background-image:radial-gradient(60% 50% at 95% 0%,rgba(47,198,232,.18),transparent 70%)}
+#cbf{background:var(--cbf-bg);--ac:var(--cbf-ac);background-image:repeating-linear-gradient(115deg,transparent 0 22px,rgba(216,183,110,.045) 22px 23px)}
+#nacao{background:var(--nacao-bg);--ac:var(--nacao-ac)}
+#idp{background:var(--idp-bg);--ac:var(--idp-ac)}
+.sub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+.sub h3{margin:0;font-family:var(--f-display);font-stretch:112%;font-weight:750;font-size:clamp(19px,2vw,24px);line-height:1.2}
+.sub .mono{color:var(--on-dark-soft)}
+
+/* video */
+.player{display:grid;grid-template-columns:1fr 250px;gap:16px;align-items:start}
+.player > *{min-width:0}
+.screen{background:#000;border:1px solid rgba(47,198,232,.35);border-radius:10px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(47,198,232,.35)}
+.screen-bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:#0B2238;border-bottom:1px solid rgba(255,255,255,.08)}
+.screen-bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22)}
+.screen-bar span{margin-left:10px;color:var(--on-dark-soft);font-size:11px}
+.screen video{width:100%;aspect-ratio:1280/578;background:#06182A}
+.chapters{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.2)}
+.chapters button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:44px 1fr;gap:8px;width:100%;padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.12);font-size:14.5px;color:var(--on-dark-soft);transition:color .2s,background .2s}
+.chapters button:hover{color:var(--on-dark);background:rgba(255,255,255,.04)}
+.chapters button:focus-visible{outline:2px solid var(--ac);outline-offset:-2px}
+.chapters button .mono{color:inherit;font-size:11.5px;padding-top:2px}
+.chapters button.on{color:var(--aicon-ac)}
+
+.vwrap{position:relative}
+.vload{position:absolute;inset:auto 0 0 0;padding:14px 16px;background:linear-gradient(transparent,rgba(6,24,42,.92));display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.vload .mono{color:var(--on-dark)}
+.vbar{height:3px;background:rgba(255,255,255,.18);border-radius:2px;overflow:hidden}
+.vbar i{display:block;height:100%;width:0;background:var(--aicon-ac);transition:width .2s}
+/* carousel */
+.carousel{position:relative}
+.track{display:flex;gap:clamp(12px,1.6vw,20px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{scroll-snap-align:start;margin:0;flex:0 0 auto}
+.slide button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:6px;overflow:hidden;position:relative}
+.slide button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.slide img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.slide button:hover img{transform:scale(1.025)}
+.slide figcaption{margin-top:10px;font-size:14px;color:var(--on-dark-soft);display:flex;gap:10px}
+.slide figcaption .mono{color:var(--ac);font-size:11.5px;padding-top:2px}
+.feed .slide{width:clamp(250px,31vw,390px)}
+.ctrl{display:flex;align-items:center;gap:10px;margin-top:18px}
+.ctrl > button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;transition:background .2s,color .2s,opacity .2s}
+.ctrl > button:hover{background:var(--on-dark);color:var(--ink)}
+.ctrl > button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.ctrl > button[disabled]{opacity:.3;pointer-events:none}
+.ctrl svg{width:18px;height:18px}
+.count{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--on-dark-soft);margin-left:6px;font-variant-numeric:tabular-nums}
+.dots{display:flex;gap:6px;margin-left:auto}
+.dots button{all:unset;cursor:pointer;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.3);transition:background .2s,width .2s}
+.dots button.on{background:var(--ac);width:20px;border-radius:4px}
+
+/* single "instagram" carousels */
+.ig-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+.ig-pair > *{min-width:0}
+.ig{max-width:420px}
+.ig .post{background:#fff;color:#111;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.ig .post-head{display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13.5px;font-weight:600}
+.ig .post-head i{width:28px;height:28px;border-radius:50%;background:#0B3C96;display:grid;place-items:center;color:#fff;font-style:normal;font-size:10px;font-weight:800;letter-spacing:-.02em}
+.ig .post-head span{margin-left:auto;font-family:var(--f-mono);font-size:11px;color:#666;font-weight:400}
+.ig .track{gap:0}
+.ig .slide{width:100%}
+.ig .slide button{border-radius:0}
+.ig .ctrl{margin:0;padding:10px 12px 12px}
+.ig .ctrl > button{width:34px;height:34px;border-color:#ccc;color:#111}
+.ig .ctrl > button:hover{background:#111;color:#fff}
+.ig .count{color:#666}
+.ig .dots button{background:#ccc}
+.ig .dots button.on{background:#0B3C96}
+.ig + p,.ig-cap{font-size:15px;color:var(--on-dark-soft);margin:14px 0 0;max-width:46ch}
+.print{margin-top:clamp(40px,6vw,72px)}
+.print figure{margin:0}
+.print button{all:unset;cursor:zoom-in;display:block;width:100%;border-radius:6px;overflow:hidden}
+.print button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.print img{width:100%;aspect-ratio:1412/736;object-fit:cover}
+.print figcaption{margin-top:12px;font-size:15px;color:var(--on-dark-soft);max-width:70ch}
+
+.pages .slide{width:100%}
+.pages .slide button{border-radius:8px;background:#fff}
+.pages .slide img{aspect-ratio:3200/1675;object-fit:contain}
+.pages .slide figcaption{font-size:15px}
+/* moovy */
+.moovy{--mv:#3D00F0;--lime:#D4F262;background:var(--mv);color:#FFFFFF;padding-block:clamp(48px,7vw,96px);overflow:hidden}
+.mv-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.3);color:var(--lime)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(24px,4vw,48px)}
+.mv-grid > *{min-width:0}
+.mv-word{font-family:var(--f-display);font-weight:900;font-style:italic;font-stretch:112%;color:var(--lime);font-size:clamp(72px,10.5vw,160px);line-height:.8;letter-spacing:-.045em}
+.mv-word img{width:100%;max-width:560px;height:auto}
+.mv-word span{display:block;font-family:var(--f-mono);font-style:normal;font-weight:500;font-size:clamp(12px,1.1vw,14px);letter-spacing:.5em;text-transform:uppercase;color:#FFFFFF;margin:18px 0 0 .4em}
+.mv-copy p{margin:0 0 14px;max-width:46ch;color:rgba(255,255,255,.82)}
+.mv-copy .mv-lede{font-size:clamp(19px,1.9vw,24px);line-height:1.35;color:#FFFFFF}
+.mv-services{list-style:none;margin:20px 0 22px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.mv-services li{background:var(--lime);color:var(--mv);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:650}
+.mv-link{display:inline-block;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--lime);border-bottom:1px solid var(--lime);padding-bottom:2px}
+.mv-link:hover{color:#FFFFFF;border-color:#FFFFFF}
+.mv-palette{display:grid;grid-template-columns:repeat(6,1fr);margin-top:clamp(36px,5vw,64px);border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.mv-palette div{background:var(--c);color:var(--t);aspect-ratio:1.5/1;padding:12px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.mv-palette .mono{font-size:11px}
+@media (max-width: 720px){
+  .mv-grid{grid-template-columns:1fr}
+  .mv-palette{grid-template-columns:repeat(3,1fr)}
+  .mv-palette div{aspect-ratio:auto;min-height:96px}
+}
+/* contact */
+.contact{background:var(--ink);color:var(--on-dark);padding-block:clamp(56px,8vw,104px) 40px}
+.contact h2{font-family:var(--f-display);font-stretch:125%;font-weight:850;text-transform:uppercase;font-size:clamp(38px,8vw,112px);line-height:.88;margin:0 0 36px;letter-spacing:-.02em}
+.contact h2 .thin{font-weight:300;font-style:italic;font-stretch:100%}
+.links{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}
+.links > div{padding:18px 16px 20px 0;border-bottom:1px solid rgba(255,255,255,.25);min-width:0}
+.links .mono{color:var(--on-dark-soft);display:block;margin-bottom:6px}
+.links a,.links .val{font-size:16px;text-decoration:none;word-break:break-word}
+.links a:hover{text-decoration:underline;text-underline-offset:3px}
+.copy{all:unset;cursor:pointer;margin-left:8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:2px 8px;color:var(--on-dark-soft)}
+.copy:hover{color:var(--on-dark);border-color:var(--on-dark)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:48px;color:var(--on-dark-soft)}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;margin:0;width:100%;height:100%;max-width:100%;max-height:100%;background:rgba(8,9,11,.94);color:var(--on-dark)}
+dialog.lb::backdrop{background:rgba(8,9,11,.6)}
+.lb-inner{position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;padding:max(12px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lb-top .mono{color:var(--on-dark-soft)}
+.lb-stage{display:grid;place-items:center;min-height:0;padding-block:12px}
+.lb-stage img{max-height:100%;max-width:100%;object-fit:contain;border-radius:4px;user-select:none;-webkit-user-drag:none}
+.lb-bot{display:flex;justify-content:center;gap:12px}
+.lb button{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center}
+.lb button:hover{background:var(--on-dark);color:var(--ink)}
+.lb button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.lb svg{width:18px;height:18px}
+
+/* responsive */
+@media (max-width: 900px){
+  .player{grid-template-columns:1fr}
+  .chapters{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+  .about-grid,.room-intro{grid-template-columns:1fr}
+  .index ol{grid-template-columns:1fr 1fr}
+  .index li:nth-child(2){border-right:0}
+  .index li:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .links{grid-template-columns:1fr}
+}
+@media (max-width: 720px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{order:-1;max-width:440px}
+  .ig-pair{grid-template-columns:1fr}
+  .ig{max-width:100%}
+  .feed .slide{width:76vw}
+  .xp li{grid-template-columns:1fr}
+  .top .mark{display:none}
+  .top nav{margin-left:0}
+}
+@media (max-width: 460px){
+  .chapters{grid-template-columns:1fr}
+  .links{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inicio">P.H. SAMPAIO</a>
+    <nav aria-label="Seções">
+      <a href="#sobre">Sobre</a>
+      <a href="#moovy">Moovy</a>
+      <a href="#aicon">Aicon</a>
+      <a href="#cbf">CBF Academy</a>
+      <a href="#nacao">Nação</a>
+      <a href="#idp">IDP</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="mono">Portfólio · Design gráfico · 2026</span>
+        <h1><span>Paulo</span><span class="thin">Henrique</span><span>Sampaio</span></h1>
+        <p class="lede">Designer e estudante de Publicidade e Propaganda no IDP, em Brasília. Sócio-fundador da Moovy, agência de publicidade para o mercado wellness. Crio identidades, campanhas e interfaces para marcas de esporte, educação e audiovisual.</p>
+        <div class="hero-meta mono">
+          <span>Brasília · DF</span>
+          <span>Disponível para projetos</span>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="media/paulo.jpg" alt="Retrato em preto e branco de Paulo Henrique Sampaio sentado em uma cadeira, com a mão apoiada no queixo">
+        <figcaption class="mono">Retrato · P&amp;B</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="index">
+    <div class="wrap" style="padding-inline:0">
+      <ol>
+        <li><a href="#aicon"><span class="mono">01 · UI / Web</span><b>Aicon</b><small>Plataforma de locação audiovisual</small></a></li>
+        <li><a href="#cbf"><span class="mono">02 · Campanha</span><b>CBF Academy</b><small>Summit CBF Academy 2026</small></a></li>
+        <li><a href="#nacao"><span class="mono">03 · Social media</span><b>Nação Club</b><small>Posts e carrosséis</small></a></li>
+        <li><a href="#idp"><span class="mono">04 · Eventos</span><b>IDP</b><small>Congresso e seminário</small></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Prazer,<br>me chamo Paulo.</h2>
+      <span class="mono">Sobre mim</span>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="bio">Atuo em pesquisa de mercado, branding e comunicação para empresas e instituições de diferentes segmentos, <em>unindo análise estratégica e visão criativa</em> para gerar resultado real para marcas e clientes.</p>
+        <div class="block edu">
+          <h3 class="mono">Formação</h3>
+          <p><b>IDP</b> · Publicidade e Propaganda (2023–27)</p>
+          <p><b>FCSH</b> · Intercâmbio em Portugal, Ciências da Comunicação (set/25–fev/26)</p>
+        </div>
+        <div class="block">
+          <h3 class="mono">Ferramentas e habilidades</h3>
+          <ul class="skills">
+            <li>Photoshop</li><li>Illustrator</li><li>InDesign</li><li>Figma</li><li>Lightroom</li><li>Premiere</li><li>Fotografia</li><li>Google Data Studio</li><li>Pacote Office</li><li>Inglês intermediário</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3 class="mono" style="margin:0 0 12px">Experiência</h3>
+        <ul class="xp">
+          <li><span class="when mono">2026 – atual</span><div><h4>Moovy <i>Sócio-fundador</i></h4><p>Agência de publicidade voltada ao mercado wellness: saúde, estilo de vida e autocuidado.</p></div></li>
+          <li><span class="when mono">Mar/26 – atual</span><div><h4>Aicon <i>Consultoria</i></h4><p>Pesquisa de mercado e análise para relações públicas, plataforma de e-commerce para locação de equipamentos, rebranding e editoriais para redes sociais.</p></div></li>
+          <li><span class="when mono">Jun/25 – atual</span><div><h4>CBF Academy <i>Designer</i></h4><p>Artes para mídia paga (Meta e Google Ads) e orgânica, peças gráficas para eventos e produção de produtos.</p></div></li>
+          <li><span class="when mono">Mar/25 – Set/25</span><div><h4>Banco do Brasil <i>Estágio</i></h4><p>Materiais internos e apresentações estratégicas para a implementação do novo jeito de trabalhar no banco.</p></div></li>
+          <li><span class="when mono">Out/23 – Fev/25</span><div><h4>IDP <i>Estágio</i></h4><p>Estratégias de divulgação de eventos, comunicação visual, programações, e-mail marketing e inscrições via Sympla.</p></div></li>
+          <li><span class="when mono">Ago/24 – Dez/24</span><div><h4>Laços <i>Designer</i></h4><p>Posicionamento de marca, identidade visual e design do site de uma organização sem fins lucrativos.</p></div></li>
+          <li><span class="when mono">Abr/23 – Jun/23</span><div><h4>Villa Giardini <i>Estágio</i></h4><p>Cobertura de eventos, estratégia de conteúdo para três perfis no Instagram, criação e edição de vídeos curtos.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOOVY -->
+<section class="moovy" id="moovy">
+  <div class="wrap">
+    <div class="mv-top">
+      <span class="mono">Minha agência · Sócio-fundador</span>
+      <span class="mono">Publicidade · Mercado wellness</span>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-word"><img src="media/moovy-logo.png" alt="Logo da Moovy" width="1200" height="600"><span>agency</span></div>
+      <div class="mv-copy">
+        <p class="mv-lede">Fundei a Moovy para fazer a comunicação de marcas do universo wellness: academias, estúdios, nutrição, saúde mental, beleza e esporte.</p>
+        <p>A missão é gerar valor real e senso de comunidade entre essas marcas e seus públicos, com uma comunicação especialista, próxima e cheia de energia.</p>
+        <ul class="mv-services">
+          <li>Branding e design</li><li>Social media</li><li>Live marketing</li><li>Mídia e tráfego</li>
+        </ul>
+        <a class="mv-link" href="#nacao">Ver case Nação Club →</a>
+      </div>
+    </div>
+    <div class="mv-palette" aria-label="Paleta da marca Moovy">
+      <div style="--c:#3D00F0;--t:#D4F262"><span class="mono">Violeta</span><span class="mono">#3D00F0</span></div>
+      <div style="--c:#D4F262;--t:#3D00F0"><span class="mono">Lima</span><span class="mono">#D4F262</span></div>
+      <div style="--c:#98F0E2;--t:#3D00F0"><span class="mono">Água</span><span class="mono">#98F0E2</span></div>
+      <div style="--c:#F03BAA;--t:#FFFFFF"><span class="mono">Pink</span><span class="mono">#F03BAA</span></div>
+      <div style="--c:#FA4A32;--t:#FFFFFF"><span class="mono">Coral</span><span class="mono">#FA4A32</span></div>
+      <div style="--c:#1F1D18;--t:#D4F262"><span class="mono">Grafite</span><span class="mono">#1F1D18</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 AICON -->
+<section class="room" id="aicon">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="num">01</span> Aicon<small>Plataforma de locação de equipamentos audiovisuais</small></h2>
+      <span class="mono">UI · Web · Protótipo</span>
+    </div>
+    <div class="room-intro">
+      <p>Protótipo navegável de um e-commerce para locação de câmeras, lentes e iluminação, com área institucional, cases, comunidade e cursos. O vídeo percorre o site do início ao fim; use os capítulos para pular direto para cada parte.</p>
+      <div class="facts"><span>Consultoria · 2026</span><span>Figma</span><span>E-commerce</span><span>Design de interface</span></div>
+    </div>
+    <div class="player">
+      <div class="screen">
+        <div class="screen-bar"><i></i><i></i><i></i><span class="mono">aicon · protótipo</span></div>
+        <div class="vwrap"><video id="aiconVideo" poster="media/aicon-poster.jpg" controls playsinline muted preload="none"></video><div class="vload" id="vload"><span class="mono" id="vmsg">Carregando vídeo…</span><div class="vbar"><i id="vbar"></i></div></div></div>
+      </div>
+      <ol class="chapters" id="chapters">
+        <li><button data-t="0"><span class="mono">0:00</span>Home e busca</button></li>
+        <li><button data-t="25"><span class="mono">0:25</span>Catálogo</button></li>
+        <li><button data-t="35"><span class="mono">0:35</span>Página do produto</button></li>
+        <li><button data-t="65"><span class="mono">1:05</span>Carrinho</button></li>
+        <li><button data-t="80"><span class="mono">1:20</span>Inscrição de projetos</button></li>
+        <li><button data-t="115"><span class="mono">1:55</span>Sobre a Aicon</button></li>
+        <li><button data-t="140"><span class="mono">2:20</span>Imprensa</button></li>
+        <li><button data-t="165"><span class="mono">2:45</span>Cases</button></li>
+        <li><button data-t="190"><span class="mono">3:10</span>Comunidade</button></li>
+        <li><button data-t="215"><span class="mono">3:35</span>Perfil profissional</button></li>
+        <li><button data-t="240"><span class="mono">4:00</span>Aicon Academy</button></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CBF -->
+<section class="room" id="cbf">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="num">02</span> CBF Academy<small>Campanha do Summit CBF Academy 2026</small></h2>
+      <span class="mono">Campanha · Social · Mídia paga</span>
+    </div>
+    <div class="room-intro">
+      <p>Peças de lançamento do principal encontro de educação e futebol da CBF Academy: anúncio de palestrantes confirmados, data marcada e abertura de vendas. Sistema visual em azul-marinho e dourado, com o lettering em linhas do Summit como assinatura.</p>
+      <div class="facts"><span>Designer · desde jun/25</span><span>25 de novembro · São Paulo</span><span>Feed e Ads</span></div>
+    </div>
+    <div class="carousel feed" data-name="CBF Academy">
+      <div class="track">
+        <figure class="slide"><button><img src="media/cbf-ancelotti.jpg" alt="Post Carlo Ancelotti confirmado no Summit CBF Academy 2026" loading="lazy"></button><figcaption><span class="mono">01</span>Palestrante confirmado · Carlo Ancelotti</figcaption></figure>
+        <figure class="slide"><button><img src="media/cbf-samir-confirmado.jpg" alt="Post Samir Xaud confirmado no Summit CBF Academy 2026" loading="lazy"></button><figcaption><span class="mono">02</span>Palestrante confirmado · Samir Xaud</figcaption></figure>
+        <figure class="slide"><button><img src="media/cbf-leila.jpg" alt="Post com Leila Pereira anunciando a data do Summit, 25 de novembro" loading="lazy"></button><figcaption><span class="mono">03</span>Data marcada · ingressos à venda</figcaption></figure>
+        <figure class="slide"><button><img src="media/cbf-samir-data.jpg" alt="Post com Samir Xaud: o principal encontro de educação e futebol está chegando" loading="lazy"></button><figcaption><span class="mono">04</span>Contagem para o evento</figcaption></figure>
+        <figure class="slide"><button><img src="media/cbf-vendas-abertas.jpg" alt="Post vendas abertas: se você trabalha com futebol, precisa estar aqui" loading="lazy"></button><figcaption><span class="mono">05</span>Vendas abertas</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 NAÇÃO -->
+<section class="room" id="nacao">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="num">03</span> Nação Club<small>Conteúdo para redes sociais</small></h2>
+      <span class="mono">Social media · Carrossel</span>
+    </div>
+    <div class="room-intro">
+      <p>Capas de carrossel educativo e convite de evento para um clube de treino funcional e CrossFit. Fotografia de treino real, tipografia espaçada e o azul-gelo da marca, com o contorno do logo atravessando as imagens.</p>
+      <div class="facts"><span>Cliente Moovy</span><span>Instagram</span><span>Nação Celebration · 12.09.26</span><span>Direção de arte</span></div>
+    </div>
+    <div class="carousel feed" data-name="Nação Club">
+      <div class="track">
+        <figure class="slide"><button><img src="media/nacao-crossfit.jpg" alt="Capa de carrossel: descubra como funcionam nossas aulas de CrossFit" loading="lazy"></button><figcaption><span class="mono">01</span>Capa de carrossel · Aulas de CrossFit</figcaption></figure>
+        <figure class="slide"><button><img src="media/nacao-treino.jpg" alt="Capa de carrossel: hábitos que a maioria das pessoas deixam de fazer após o treino" loading="lazy"></button><figcaption><span class="mono">02</span>Capa de carrossel · Hábitos pós-treino</figcaption></figure>
+        <figure class="slide"><button><img src="media/nacao-celebration.jpg" alt="Post do evento Nação Celebration, 12.09.26 às 14h" loading="lazy"></button><figcaption><span class="mono">03</span>Evento · Nação Celebration</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 IDP -->
+<section class="room" id="idp">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="num">04</span> IDP<small>Comunicação de eventos acadêmicos</small></h2>
+      <span class="mono">Carrossel · Impressos · Ambientação</span>
+    </div>
+    <div class="room-intro">
+      <p>Durante o estágio no IDP, criei a comunicação visual de eventos da instituição, do carrossel de divulgação às peças impressas no prédio. Clique em uma página para ver em tela cheia.</p>
+      <div class="facts"><span>Estágio · 2023–2025</span><span>Instagram</span><span>Impressos</span></div>
+    </div>
+
+    <div class="carousel pages" data-name="IDP">
+      <div class="track">
+        <figure class="slide"><button><img src="media/idp-pagina-1.jpg" alt="Carrossel de participantes confirmados do XXVII Congresso Internacional de Direito Constitucional: capa e ministros Gilmar Mendes, Flávio Dino e Fernando Haddad" loading="lazy"></button><figcaption><span class="mono">01</span>XXVII Congresso Internacional de Direito Constitucional · carrossel de participantes confirmados</figcaption></figure>
+        <figure class="slide"><button><img src="media/idp-pagina-2.jpg" alt="Fotos do congresso no prédio do IDP: painel de entrada, balcão de credenciamento e adesivos na escadaria" loading="lazy"></button><figcaption><span class="mono">02</span>Impressos e ambientação do congresso · painel, credenciamento e escadaria com o mote “Debatendo as direções do futuro jurídico”</figcaption></figure>
+        <figure class="slide"><button><img src="media/idp-pagina-3.jpg" alt="Carrossel do IV Seminário de Processo Civil do IDP: capa, programação e encerramento" loading="lazy"></button><figcaption><span class="mono">03</span>IV Seminário de Processo Civil do IDP · carrossel com a programação do dia</figcaption></figure>
+        <figure class="slide"><button><img src="media/idp-pagina-4.jpg" alt="Carrossel de divulgação de artigo gratuito com Luana Carvalho" loading="lazy"></button><figcaption><span class="mono">04</span>Artigo gratuito com Luana Carvalho · carrossel de divulgação de conteúdo</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="contact" id="contato">
+  <div class="wrap">
+    <h2>Vamos criar <span class="thin">algo</span> juntos?</h2>
+    <div class="links">
+      <div><span class="mono">E-mail</span><span class="val" id="mail">paulohenrique.sampaioribeiro05@gmail.com</span><button class="copy" data-copy="paulohenrique.sampaioribeiro05@gmail.com">Copiar</button></div>
+      <div><span class="mono">Behance</span><a href="https://www.behance.net/paulohsampaio3" target="_blank" rel="noopener">behance.net/paulohsampaio3</a></div>
+      <div><span class="mono">LinkedIn · Instagram</span><a href="https://linkedin.com/in/paulo-henrique-sampaio-70262a26b/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/paulohenriquesr_/" target="_blank" rel="noopener">@paulohenriquesr_</a></div>
+    </div>
+    <div class="foot mono"><span>Paulo Henrique Sampaio · Portfólio 2026</span><a href="#inicio">Voltar ao topo ↑</a></div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Visualização ampliada">
+  <div class="lb-inner">
+    <div class="lb-top"><span class="mono" id="lbLabel"></span><button id="lbClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-bot"><button id="lbPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button><button id="lbNext" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button></div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  const arrow = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="${d}"/></svg>`;
+  const pad = n => String(n).padStart(2,'0');
+
+  /* carousels */
+  document.querySelectorAll('.carousel').forEach(car => {
+    const track = car.querySelector('.track');
+    const slides = [...track.children];
+    const ctrl = document.createElement('div'); ctrl.className = 'ctrl';
+    ctrl.innerHTML = `<button class="prev" aria-label="Anterior">${arrow('M15 5l-7 7 7 7')}</button><button class="next" aria-label="Próxima">${arrow('M9 5l7 7-7 7')}</button><span class="count"></span><div class="dots"></div>`;
+    car.appendChild(ctrl);
+    const prev = ctrl.querySelector('.prev'), next = ctrl.querySelector('.next'), count = ctrl.querySelector('.count'), dots = ctrl.querySelector('.dots');
+    slides.forEach((s,i) => { const b = document.createElement('button'); b.setAttribute('aria-label', `Ir para ${i+1}`); b.onclick = () => go(i); dots.appendChild(b); });
+    let idx = 0;
+    const go = i => { i = Math.max(0, Math.min(slides.length-1, i)); track.scrollTo({left: slides[i].offsetLeft - slides[0].offsetLeft, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); };
+    const update = () => {
+      const x = track.scrollLeft, base = slides[0].offsetLeft;
+      let best = 0, bd = Infinity;
+      slides.forEach((s,i) => { const d = Math.abs(s.offsetLeft - base - x); if (d < bd) { bd = d; best = i; } });
+      const atEnd = x + track.clientWidth >= track.scrollWidth - 4;
+      if (atEnd && !car.classList.contains('single')) best = Math.max(best, slides.length - 1);
+      idx = best;
+      count.textContent = `${pad(idx+1)} / ${pad(slides.length)}`;
+      [...dots.children].forEach((d,i) => d.classList.toggle('on', i === idx));
+      prev.disabled = x <= 4; next.disabled = atEnd;
+    };
+    prev.onclick = () => go(idx-1); next.onclick = () => go(idx+1);
+    let t; track.addEventListener('scroll', () => { cancelAnimationFrame(t); t = requestAnimationFrame(update); }, {passive:true});
+    addEventListener('resize', update);
+    track.tabIndex = 0; track.setAttribute('aria-label', car.dataset.name);
+    track.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); go(idx+1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx-1); } });
+    /* drag with mouse on desktop */
+    let down = false, sx = 0, sl = 0, moved = false;
+    track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = track.scrollLeft; track.style.scrollSnapType = 'none'; });
+    addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 5) moved = true; track.scrollLeft = sl - dx; });
+    addEventListener('pointerup', () => { if (!down) return; down = false; track.style.scrollSnapType = ''; if (moved) { go(idx); } });
+    track.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+    track.addEventListener('dragstart', e => e.preventDefault());
+    slides.forEach((s,i) => s.querySelector('button').addEventListener('click', () => openLB(slides.map(x => x.querySelector('img')), i, car.dataset.name)));
+    update();
+  });
+
+  /* lightbox */
+  const lb = document.getElementById('lb'), img = document.getElementById('lbImg'), label = document.getElementById('lbLabel');
+  const lbPrev = document.getElementById('lbPrev'), lbNext = document.getElementById('lbNext');
+  let set = [], cur = 0, name = '';
+  function show(){ const s = set[cur]; img.src = s.src; img.alt = s.alt; label.textContent = `${name} · ${pad(cur+1)} / ${pad(set.length)}`; const multi = set.length > 1; lbPrev.hidden = lbNext.hidden = !multi; }
+  function openLB(list, i, n){ set = list; cur = i; name = n; show(); try { lb.showModal(); } catch(e) { lb.setAttribute('open',''); } }
+  function closeLB(){ try { lb.close(); } catch(e) { lb.removeAttribute('open'); } }
+  lbPrev.onclick = () => { cur = (cur - 1 + set.length) % set.length; show(); };
+  lbNext.onclick = () => { cur = (cur + 1) % set.length; show(); };
+  document.getElementById('lbClose').onclick = closeLB;
+  document.getElementById('lbStage').addEventListener('click', e => { if (e.target.id === 'lbStage') closeLB(); });
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowRight') lbNext.click(); if (e.key === 'ArrowLeft') lbPrev.click(); });
+  let tx = null;
+  lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50 && set.length > 1) (dx < 0 ? lbNext : lbPrev).click(); tx = null; });
+  document.querySelectorAll('[data-single]').forEach(b => b.addEventListener('click', () => openLB([b.querySelector('img')], 0, b.dataset.single)));
+
+  /* video chapters */
+  const v = document.getElementById('aiconVideo');
+  const vload = document.getElementById('vload'), vmsg = document.getElementById('vmsg'), vbar = document.getElementById('vbar');
+  let vState = 'idle', pendingT = null;
+  const vReady = () => { vState = 'ready'; vload.hidden = true; if (pendingT !== null) { v.currentTime = pendingT; const p = v.play(); if (p && p.catch) p.catch(()=>{}); pendingT = null; } };
+  const vDirect = () => { v.preload = 'auto'; v.src = vFile; v.addEventListener('loadedmetadata', vReady, {once:true}); v.addEventListener('error', () => { vmsg.textContent = 'Não foi possível carregar o vídeo neste navegador. Tente atualizar a página.'; vload.hidden = false; }, {once:true}); };
+  const canMp4 = !!v.canPlayType('video/mp4; codecs="avc1.64001F"');
+  const vFile = canMp4 ? 'media/aicon.mp4' : 'media/aicon.webm', vType = canMp4 ? 'video/mp4' : 'video/webm';
+  async function loadVideo(){
+    if (vState !== 'idle') return; vState = 'loading'; vload.hidden = false;
+    try {
+      const r = await fetch(vFile); if (!r.ok || !r.body) throw new Error('http');
+      const total = +r.headers.get('content-length') || 13000000; const reader = r.body.getReader(); const parts = []; let got = 0;
+      for (;;) { const {done, value} = await reader.read(); if (done) break; parts.push(value); got += value.length; vbar.style.width = Math.min(100, got/total*100) + '%'; vmsg.textContent = 'Carregando vídeo… ' + Math.round(Math.min(100, got/total*100)) + '%'; }
+      const url = URL.createObjectURL(new Blob(parts, {type:vType}));
+      v.addEventListener('error', () => { if (vState !== 'direct') { vState = 'direct'; vDirect(); } }, {once:true});
+      v.addEventListener('loadedmetadata', vReady, {once:true});
+      v.preload = 'auto'; v.src = url;
+    } catch (e) { vState = 'direct'; vDirect(); }
+  }
+  vload.hidden = true;
+  if ('IntersectionObserver' in window) { const vio = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { vio.disconnect(); loadVideo(); } }, {rootMargin:'600px 0px'}); vio.observe(v); } else loadVideo();
+  v.addEventListener('play', () => { if (vState === 'idle' || vState === 'loading') { v.pause(); loadVideo(); } });
+  const chs = [...document.querySelectorAll('#chapters button')];
+  chs.forEach(b => b.addEventListener('click', () => { if (vState !== 'ready') { pendingT = +b.dataset.t; loadVideo(); return; } v.currentTime = +b.dataset.t; const p = v.play(); if (p && p.catch) p.catch(()=>{}); }));
+  v.addEventListener('timeupdate', () => { let a = 0; chs.forEach((b,i) => { if (v.currentTime >= +b.dataset.t - .3) a = i; }); chs.forEach((b,i) => b.classList.toggle('on', i === a)); });
+  chs[0].classList.add('on');
+
+  /* nav highlight */
+  const links = [...document.querySelectorAll('.top nav a')];
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id)); }), {rootMargin: '-45% 0px -50% 0px'});
+  document.querySelectorAll('#sobre,#moovy,#aicon,#cbf,#nacao,#idp,#contato').forEach(s => io.observe(s));
+
+  /* copy */
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+    const txt = b.dataset.copy;
+    const done = () => { b.textContent = 'Copiado'; setTimeout(() => b.textContent = 'Copiar', 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById('mail')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(txt).then(done, fallback); } catch(e) { fallback(); }
+  }));
+})();
+</script>
+
+</body>
+</html>
